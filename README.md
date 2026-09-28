@@ -9,13 +9,14 @@ Minecraft **1.21.1** / NeoForge **21.1.250** / muxi-game-core **1.9.1**。
 安装 Git 和 Python 3.10+（Windows 可用 `py -3.12` 代替 python）：
 
 ```sh
-git clone https://github.com/muxigame/bmc5client.git
+git clone -c core.longpaths=true https://github.com/muxigame/bmc5client.git
 cd bmc5client
 python tools/client.py setup
 python tools/client.py verify
 ```
 
 setup 从 GitHub Release 下载约 1.32 GB 的资源包并校验，从原作者地址下载 Simple Nicknames，在忽略提交的 `game/` 生成干净客户端内容。
+Windows 建议放在 `C:\Games\bmc5client` 等短路径。光影文件夹层级较深，克隆命令已为本仓库启用 Git 长路径支持，不改全局设置。
 它不打开游戏窗口，不登录账号，也不修改你现有的启动器实例。
 
 然后用支持 NeoForge 的启动器新建 **Minecraft 1.21.1 + NeoForge 21.1.250** 实例，使用 **Java 21+**，建议分配 6–8 GB 堆内存。
