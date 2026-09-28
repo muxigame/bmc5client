@@ -1,0 +1,221 @@
+{
+  "optionalMods": [
+    {
+      "glob": "mods/[自动第三人称]auto_third_person-neo-1.21.1-2.2.jar",
+      "policy": "Optional",
+      "group": "视角",
+      "label": "自动第三人称（骑乘、滑翔等场景自动切第三人称）"
+    },
+    {
+      "glob": "mods/[更真实的第一人称模型]firstperson-neoforge-2.7.2-mc1.21.1.jar",
+      "policy": "Optional",
+      "group": "视角",
+      "label": "更真实的第一人称模型（低头能看到自己身体）"
+    },
+    {
+      "glob": "mods/c2me-neoforge-mc1.21.1-0.4.0-alpha.0.120.jar",
+      "policy": "Optional",
+      "group": "性能",
+      "label": "多线程区块生成（默认关闭；单机探索新地形时会与画面渲染抢 CPU，联机时由服务器承担生成，装了也用不上）"
+    },
+    {
+      "glob": "mods/[是，史蒂夫模型]ysm-*.jar",
+      "policy": "Optional",
+      "defaultOn": true,
+      "group": "外观",
+      "label": "是，史蒂夫模型 (YSM)"
+    }
+  ],
+  "overlays": [
+    {
+      "path": "config/iris.properties",
+      "format": "Properties",
+      "enforce": {
+        "maxShadowRenderDistance": 16,
+        "disableUpdateMessage": true
+      },
+      "createIfMissing": true
+    },
+    {
+      "path": "options.txt",
+      "format": "Properties",
+      "seedKeys": {
+        "graphicsMode": 0,
+        "fov": 0,
+        "soundCategory_master": 0.5,
+        "soundCategory_music": 1.0,
+        "simulationDistance": 8,
+        "particles": 0,
+        "key_iris.keybind.reload": "key.keyboard.unknown",
+        "key_iris.keybind.toggleShaders": "key.keyboard.unknown",
+        "key_iris.keybind.shaderPackSelection": "key.keyboard.unknown",
+        "key_iris.keybind.wireframe": "key.keyboard.unknown",
+        "key_key.pasterdream.teleportation": "key.keyboard.j",
+        "key_key.crawlondemand.crawl": "key.keyboard.c",
+        "key_key.crawlondemand.toggle_crawl": "key.keyboard.unknown",
+        "key_key.pasterdream.cloak_activate": "key.keyboard.n",
+        "key_key.yes_steve_model.animation_roulette.desc": "key.keyboard.z:ALT",
+        "key_key.toms_storage.open_terminal": "key.keyboard.b:ALT",
+        "key_key.deeperdarker.boost": "key.keyboard.unknown",
+        "key_key.yes_steve_model.debug_animation.desc": "key.keyboard.unknown",
+        "key_key.sophisticatedbackpacks.open_backpack": "key.keyboard.b",
+        "key_key.sophisticatedbackpacks.inventory_interaction": "key.keyboard.c:ALT",
+        "key_key.sophisticatedbackpacks.toggle_upgrade_1": "key.keyboard.z:CONTROL",
+        "key_justzoom.keybinds.keybind.zoom": "key.keyboard.o:ALT",
+        "key_key.twilightforest.zoom": "key.keyboard.unknown",
+        "key_gui.xaero_enlarge_map": "key.keyboard.m:ALT",
+        "key_key.irons_spellbooks.spell_wheel": "key.keyboard.r:ALT",
+        "key_key.better_client.bundle_up": "key.keyboard.unknown",
+        "key_key.deep_aether.stratus_dash_ability.desc": "key.keyboard.u:ALT",
+        "key_webdisplays.key.toggle_mouse": "key.keyboard.unknown",
+        "key_key.accessorify.use_spyglass": "key.keyboard.k:ALT",
+        "key_key.twilightforest.item_display_map_cycle": "key.keyboard.unknown",
+        "key_key.cataclysm.helmet_ability": "key.keyboard.c:CONTROL",
+        "key_accessories.key.open_accessories_screen": "key.keyboard.h:ALT",
+        "key_key.eternal_starlight.switch_crest": "key.keyboard.g:ALT",
+        "key_key.cataclysm.ability": "key.keyboard.v:CONTROL",
+        "key_key.cataclysm.boots_ability": "key.keyboard.b:CONTROL",
+        "key_key.irons_spellbooks.spellbook_cast": "key.keyboard.v:ALT",
+        "key_key.aether.invisibility_toggle.desc": "key.keyboard.i:ALT",
+        "key_key.deep_aether.toggle_skyjade_transparency": "key.keyboard.unknown",
+        "key_key.deeperdarker.transmit": "key.keyboard.j:ALT",
+        "key_supplementaries.keybind.quiver": "key.keyboard.n:ALT",
+        "key_key.twilightforest.swap_hotbar": "key.keyboard.unknown",
+        "key_key.accessorify.open_ender_chest": "key.keyboard.e:ALT",
+        "key_key.shouldersurfing.free_look": "key.keyboard.grave.accent",
+        "key_key.irons_spellbooks.spell_bar_modifier": "key.keyboard.left.alt",
+        "key_create.keyinfo.alt_modifier": "key.keyboard.left.alt",
+        "key_create.keyinfo.toolmenu": "key.mouse.4",
+        "key_create.keyinfo.toolbelt": "key.mouse.4",
+        "key_key.deep_aether.slider_eye_ability": "key.keyboard.u:CONTROL",
+        "key_key.maid_storage_manager.request_ingredient": "key.keyboard.1:ALT",
+        "key_key.maid_storage_manager.see_through_mark_box": "key.keyboard.2:ALT",
+        "key_key.maid_storage_manager.roll_special_mode": "key.keyboard.3:ALT",
+        "key_key.net_music_list.toggle_music_transform": "key.keyboard.unknown",
+        "key_key.l2mods.alt": "key.keyboard.unknown",
+        "key_gui.xaero_new_waypoint": "key.keyboard.n:CONTROL",
+        "key_gui.xaero_waypoints_key": "key.keyboard.m:CONTROL",
+        "key_key.touhou_little_maid_spell.open_ender_pocket": "key.keyboard.e:CONTROL",
+        "key_key.cataclysm.chestplate_ability": "key.keyboard.y:CONTROL",
+        "key_gui.xaero_minimap_settings": "key.keyboard.home",
+        "key_key.dragon_down": "key.keyboard.x:CONTROL",
+        "key_key.accessorify.open_widget": "key.keyboard.f:ALT"
+      },
+      "enforce": {
+        "skipMultiplayerWarning": true
+      },
+      "removeFromList": {
+        "resourcePacks": [
+          "mod/pasterdream:packs/paster_vanilla_ui",
+          "builtin/paster_vanilla_ui"
+        ]
+      },
+      "createIfMissing": false
+    },
+    {
+      "path": "config/memorysettings.json",
+      "format": "Json",
+      "enforce": {
+        "disableWarnings/disableWarnings": true
+      },
+      "createIfMissing": false
+    },
+    {
+      "path": "config/iceandfire/iaf-client.json",
+      "format": "Json",
+      "enforce": {
+        "client/customMainMenu": false
+      },
+      "createIfMissing": false
+    },
+    {
+      "path": "config/sodium-options.json",
+      "format": "Json",
+      "seedKeys": {
+        "quality/weather_quality": "FAST"
+      },
+      "createIfMissing": false
+    },
+    {
+      "path": "config/fml.toml",
+      "format": "Toml",
+      "enforce": {
+        "disableConfigWatcher": true,
+        "dependencyOverrides/sable": [
+          "-scalablelux"
+        ]
+      },
+      "createIfMissing": false
+    },
+    {
+      "path": "config/sodiumdynamiclights-client.toml",
+      "format": "Toml",
+      "seedKeys": {
+        "sodiumdynamiclights/mode": "FANCY"
+      },
+      "createIfMissing": false
+    },
+    {
+      "path": "config/sodiumextras-client.toml",
+      "format": "Toml",
+      "seedKeys": {
+        "embeddiumextras/performance/distanceCulling/tileEntities/cullingMaxDistanceX": 4096,
+        "embeddiumextras/performance/distanceCulling/entities/cullingMaxDistanceX": 9216,
+        "embeddiumextras/general/fpsDisplay": "ADVANCED"
+      },
+      "createIfMissing": false
+    },
+    {
+      "path": "config/shouldersurfing-client.toml",
+      "format": "Toml",
+      "enforce": {
+        "perspective/third_person_front_enabled": false,
+        "perspective/third_person_back_enabled": false
+      },
+      "createIfMissing": false
+    },
+    {
+      "path": "config/PasterDream-Client.toml",
+      "format": "Toml",
+      "enforce": {
+        "HUD/enable mod ui": false,
+        "HUD/paster health hud": false
+      },
+      "createIfMissing": false
+    },
+    {
+      "path": "config/butchercraft-common.toml",
+      "format": "Toml",
+      "enforce": {
+        "mobs/armyHoodChanceMultiplier": 0.0
+      },
+      "createIfMissing": false
+    },
+    {
+      "path": "config/CustomNpcs.cfg",
+      "format": "Properties",
+      "enforce": {
+        "InventoryGuiEnabled": false
+      },
+      "createIfMissing": true
+    }
+  ],
+  "excludedRoots": [
+    "versions",
+    "fancymenu_data",
+    "options.txt",
+    "saves",
+    "screenshots",
+    "logs",
+    "accounts",
+    "libraries",
+    "assets",
+    "runtime"
+  ],
+  "excludedFiles": [
+    "config/muxi-game-core.json",
+    "config/resourceful-config-web.json",
+    "config/yes_steve_model/blacklist.txt"
+  ],
+  "note": "No launcher credentials or Minecraft binaries. C2ME is in optional-mods, disabled by default."
+}

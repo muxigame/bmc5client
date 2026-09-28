@@ -1,0 +1,113 @@
+[HUD]
+	#仅在潜行时显示融梦能量条和精神值的HUD图标 默认：false
+	"stealth display attribute hud" = false
+	#在加载界面时会弹出帕斯特之梦的tips 默认：true
+	"loading gui tips" = true
+	#启动帕斯特之梦的主题生命值条 默认：true
+	"paster health hud" = false
+	#启用帕斯特之梦模组自定义原版UI纹理（按钮/生命值条/BOSS血条/快捷栏等，关闭后将使用原版UI） 默认：true
+	"enable mod ui" = false
+
+[SAN]
+	#显示 San 精神值条 默认：true
+	"show san hud" = true
+	#精神值量条在屏幕上的xBase位置 默认：-36.0
+	"san tank xbase" = -36.0
+	#精神值量条在屏幕上的yBase位置 默认：-34.0
+	"san tank ybase" = -34.0
+	#San 精神值条缩放倍率（0.5 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.5 ~ 2.0
+	"san hud scale" = 1.0
+	#San 精神值条位置锚点（0=左上 1=右上 2=左下 3=右下）默认：3
+	# Default: 3
+	# Range: 0 ~ 3
+	"san hud anchor" = 3
+	#始终显示 San 数值文本 默认：false（潜行时仍可查看）
+	"san show value always" = false
+
+[MELTDREAM]
+	#显示融梦能量条 默认：true
+	"show meltdream energy hud" = true
+	#融梦能量条在屏幕上的xBase位置 默认：1.0
+	"meltdreamenergy tank xbase " = 1.0
+	#融梦能量条在屏幕上的yBase位置 默认：-19.0
+	"meltdreamenergy tank ybase " = -19.0
+	#融梦能量条缩放倍率（0.5 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.5 ~ 2.0
+	"meltdream energy hud scale" = 1.0
+	#融梦能量条位置锚点（0=左上 1=右上 2=左下 3=右下）默认：2
+	# Default: 2
+	# Range: 0 ~ 3
+	"meltdream energy hud anchor" = 2
+	#始终显示融梦能量数值文本 默认：false（潜行时仍可查看）
+	"meltdream energy show value always" = false
+
+[BGM]
+	#启用帕斯特之梦模组自定义背景音乐 默认：true（关闭后不影响唱片播放）
+	"bgm master enabled" = true
+	#BGM 主音量倍率（0.0 ~ 1.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	"bgm master volume" = 1.0
+	#启用「完整播放+间隔」BGM 切换模式（true=把当前曲目完整放完，间隔后再播下一首；false=现有交叉淡化切换）默认：false
+	"bgm use song complete mode" = true
+	#完整播放后间隔秒数（30 ~ 60）默认：45
+	# Default: 45
+	# Range: 30 ~ 60
+	"bgm song interval seconds" = 45
+	#启用染梦世界主 BGM 默认：true
+	"bgm dyedream world" = true
+	#染梦世界主 BGM 音量倍率（0.0 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	"bgm dyedream world volume" = 1.0
+	#启用梦幻荒原群系 BGM 默认：true
+	"bgm dream heath" = true
+	#梦幻荒原群系 BGM 音量倍率（0.0 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	"bgm dream heath volume" = 1.0
+	#启用梦幻三角洲群系 BGM 默认：true
+	"bgm dream delta" = true
+	#梦幻三角洲群系 BGM 音量倍率（0.0 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	"bgm dream delta volume" = 1.0
+	#启用梦幻雪林群系 BGM 默认：true
+	"bgm dream taiga" = true
+	#梦幻雪林群系 BGM 音量倍率（0.0 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	"bgm dream taiga volume" = 1.0
+	#启用甜梦深海群系 BGM 默认：true
+	"bgm sweetdream" = true
+	#甜梦深海群系 BGM 音量倍率（0.0 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	"bgm sweetdream volume" = 1.0
+	#启用落雪蘑菇原群系 BGM 默认：true
+	"bgm snowfall dream" = true
+	#落雪蘑菇原群系 BGM 音量倍率（0.0 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	"bgm snowfall dream volume" = 1.0
+	#启用风之旅途·启程 BGM 默认：true
+	"bgm wind journey departure" = true
+	#风之旅途·启程 BGM 音量倍率（0.0 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	"bgm wind journey departure volume" = 1.0
+	#启用风之旅途·盛夏光年 BGM 默认：true
+	"bgm wind journey midsummer" = true
+	#风之旅途·盛夏光年 BGM 音量倍率（0.0 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	"bgm wind journey midsummer volume" = 1.0
+	#启用梦幻草原·Daisy BGM 默认：true
+	"bgm dream meadow daisy" = true
+	#梦幻草原·Daisy BGM 音量倍率（0.0 ~ 2.0）默认：1.0
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	"bgm dream meadow daisy volume" = 1.0

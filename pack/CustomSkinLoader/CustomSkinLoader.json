@@ -1,0 +1,22 @@
+{
+  "version": "14.24",
+  "buildNumber": 33,
+  "loadlist": [
+    {
+      "name": "BetterMC",
+      "type": "CustomSkinAPI",
+      "root": "https://mc.muxigame.com/api/v1/skins/csl/"
+    }
+  ],
+  "enableDynamicSkull": true,
+  "enableTransparentSkin": true,
+  "forceLoadAllTextures": true,
+  "enableCape": true,
+  "threadPoolSize": 8,
+  "enableLogStdOut": false,
+  "cacheExpiry": 30,
+  "forceUpdateSkull": false,
+  "enableLocalProfileCache": false,
+  "enableCacheAutoClean": false,
+  "forceDisableCache": false
+}
