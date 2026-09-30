@@ -30,5 +30,18 @@ class ClientTests(unittest.TestCase):
             with patch.object(client.urllib.request, 'urlopen', side_effect=AssertionError('network')):
                 self.assertEqual(client.download({'sha256': client.sha(p)}, p), p)
 
+    def test_text_manifest_must_cover_pack(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            pack_dir = root / 'pack'
+            (pack_dir / 'kubejs/startup_scripts').mkdir(parents=True)
+            (pack_dir / 'kubejs/startup_scripts/balance.js').write_text('test', encoding='utf-8')
+            lock = {'textFiles': ['kubejs/startup_scripts/balance.js']}
+            with patch.object(client, 'ROOT', root):
+                client.validate_text_manifest(lock)
+                lock['textFiles'] = []
+                with self.assertRaises(RuntimeError):
+                    client.validate_text_manifest(lock)
+
 if __name__ == '__main__':
     unittest.main()

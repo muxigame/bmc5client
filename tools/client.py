@@ -34,6 +34,25 @@ def safe(base, name):
     return result
 
 
+def validate_text_manifest(lock):
+    pack_root = ROOT / 'pack'
+    actual = {
+        path.relative_to(pack_root).as_posix()
+        for path in pack_root.rglob('*')
+        if path.is_file()
+    }
+    listed = set(lock['textFiles'])
+    unlisted = sorted(actual - listed)
+    missing = sorted(listed - actual)
+    if unlisted or missing:
+        details = []
+        if unlisted:
+            details.append('Pack files missing from runtime-lock textFiles:\n' + '\n'.join(unlisted[:30]))
+        if missing:
+            details.append('runtime-lock textFiles missing from pack/:\n' + '\n'.join(missing[:30]))
+        raise RuntimeError('\n'.join(details))
+
+
 def download(record, target):
     if target.exists() and sha(target) == record['sha256']:
         return target
@@ -173,6 +192,7 @@ def main():
     parser.add_argument('--bundle', help='Optional checksum-matching local client-assets.zip')
     args = parser.parse_args()
     lock = json.loads((ROOT / 'runtime-lock.json').read_text(encoding='utf-8'))
+    validate_text_manifest(lock)
     setup(args, lock) if args.action == 'setup' else verify(lock)
 
 
