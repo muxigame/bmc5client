@@ -8,6 +8,7 @@ import shutil
 import sys
 import urllib.request
 import zipfile
+from local_rebuild import install as install_rebuilds, locked_records, overrides as rebuild_overrides, validated_sources
 
 if sys.version_info < (3, 10):
     sys.exit('Python 3.10+ required; on Windows use py -3.12.')
@@ -132,7 +133,7 @@ def overlays(created):
 
 def verify(lock):
     issues = []
-    for record in lock['files'] + lock['external']:
+    for record in locked_records(lock):
         p = safe(GAME, record['path'])
         if not p.is_file() or p.stat().st_size != record['size'] or sha(p) != record['sha256']:
             issues.append(record['path'])
@@ -145,6 +146,7 @@ def verify(lock):
 
 
 def setup(args, lock):
+    validated_sources(ROOT, lock, getattr(args, 'mcef_jar', None))
     bundle = Path(args.bundle).resolve() if args.bundle else CACHE / 'client-assets.zip'
     if args.bundle:
         if sha(bundle) != lock['bundle']['sha256']:
@@ -152,11 +154,14 @@ def setup(args, lock):
     else:
         download(lock['bundle'], bundle)
     expected = {r['path']: r for r in lock['files']}
+    rebuilt = rebuild_overrides(lock)
     with zipfile.ZipFile(bundle) as archive:
         names = archive.namelist()
         if len(names) != len(set(names)) or set(names) != set(expected):
             raise RuntimeError('Bundle entries differ from manifest')
         for name in names:
+            if name in rebuilt:
+                continue
             dest = safe(GAME, name)
             if dest.exists():
                 if sha(dest) != expected[name]['sha256']:
@@ -170,6 +175,7 @@ def setup(args, lock):
         if dest.exists() and sha(dest) != record['sha256']:
             raise RuntimeError('Refusing to overwrite modified binary: ' + record['path'])
         download(record, dest)
+    install_rebuilds(ROOT, GAME, lock, getattr(args, 'mcef_jar', None))
     created = set()
     for name in lock['textFiles']:
         dest = safe(GAME, name)
@@ -189,6 +195,7 @@ def setup(args, lock):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action', choices=['setup', 'verify'])
+    parser.add_argument('--mcef-jar', help='Checksum-matching source-rebuilt MCEF JAR (setup only)')
     parser.add_argument('--bundle', help='Optional checksum-matching local client-assets.zip')
     args = parser.parse_args()
     lock = json.loads((ROOT / 'runtime-lock.json').read_text(encoding='utf-8'))
