@@ -46,3 +46,8 @@ NPC 内容模板：[兽人战士 · 灰牙氏族](docs/orc-warrior.md)。安装�
 网页配置管理密码不分发，各实例自行生成。不要把真实密钥写入公开配置。
 资源完整性、核心一致性和配置生成可以无界面验证；这不等于已用图形客户端登录服务器完成所有玩法验收。
 本次发布不修改或重启正式服。第三方模组、光影、模型和素材遵循各自作者许可，保留原始署名/许可；本仓库不声明拥有其版权。
+
+
+## MCEF source rebuild
+
+Before setup, build the pinned MCEF source or provide `--mcef-jar`. See [build, install and rollback](docs/mcef-rebuild.md).

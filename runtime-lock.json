@@ -10288,6 +10288,7 @@
     "kubejs/server_scripts/muxi_champions_bonus_loot.js",
     "kubejs/server_scripts/muxi_champions_health.js",
     "kubejs/server_scripts/muxi_golem_combat_balance.js",
+    "kubejs/startup_scripts/iaf_weapon_balance.js",
     "kubejs/startup_scripts/main.js",
     "mods/mcef-cache/LocalPrefs.json",
     "mods/mcef-libraries/windows_amd64/vk_swiftshader_icd.json",
@@ -16237,5 +16238,18 @@
     "tlm_custom_pack/touhou_little_maid-1.0.0/assets/touhou_little_maid_seihou/models/entity/milia.json",
     "tlm_custom_pack/touhou_little_maid-1.0.0/assets/touhou_little_maid_seihou/models/entity/vivit.json",
     "tlm_custom_pack/touhou_little_maid-1.0.0/pack.mcmeta"
+  ],
+  "localBuilds": [
+    {
+      "path": "mods/[嵌入式框架]mcef-neoforge-2.1.6-1.21.1.jar",
+      "modId": "mcef",
+      "version": "2.1.6-1.21.1-muxi.1",
+      "size": 215390,
+      "sha256": "fee3f495aa5c6566a252cdb2a6b0f153105624c125144d1cd257dbad044bdd1d",
+      "sourceProject": "mcef",
+      "sourceRepository": "https://github.com/muxigame/mcef",
+      "sourceCommit": "eb8f20f4d83dcb59a1c8a5f824bdd758d4058025",
+      "artifact": "neoforge/build/libs/mcef-neoforge-2.1.6-1.21.1-muxi.1.jar"
+    }
   ]
 }
