@@ -35,6 +35,8 @@ Windows 建议放在 `C:\Games\bmc5client` 等短路径。光影文件夹层级�
 - Simple Nicknames 保留原作者下载渠道，不在 ZIP 中重新托管。
 
 修改 `pack/` 后提交分支/PR，不提交 `game/` 中的账号、世界、缓存和运行日志。为了保护本机设置，setup 不覆盖已有文本配置；测试配置改动时，将指定文件从 pack 复制到隔离测试实例，或另建干净 checkout。
+
+NPC 内容模板：[兽人战士 · 灰牙氏族](docs/orc-warrior.md)。安装后在复制魔杖的“客户端”第 1 页调用；模板不会自动部署到服务器。
 更换二进制时使用新的 Release 和锁定清单，不覆盖现有同名资源；遇到已修改的本地二进制，setup 会中止。
 核心 Java 源码在[服务端对应提交](https://github.com/muxigame/bmc5server/tree/b952651d7e9fd33a0098c554a2ae1def4786c797/modules/muxi-game-core)，来源 core 提交 `7e3863e`。
 

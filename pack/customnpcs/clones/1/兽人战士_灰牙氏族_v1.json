@@ -1,0 +1,514 @@
+{
+    "TransformHasDisplay": 0b,
+    "AttackInvisible": 0b,
+    "IsStatue": 0b,
+    "AbsorptionAmount": 0.0f,
+    "SpawnCycle": 3,
+    "Accuracy": 60,
+    "MovingPatern": 0,
+    "HideBodyWhenKilled": 0b,
+    "ReturnToStart": 1b,
+    "TransformHasAdvanced": 0b,
+    "Weapons": [
+        {
+            "count": 1,
+            "Slot": 0b,
+            "id": "minecraft:stone_axe"
+        }
+    ],
+    "ActiveRange": 32,
+    "Resistances": {
+        "Knockback": 1.0f,
+        "Explosion": 1.0f,
+        "Melee": 1.0f,
+        "Arrow": 1.0f
+    },
+    "NPCDialogOptions": [
+    ],
+    "FactionPoints": {
+        "DecreaseFaction2Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFaction1Points": 100,
+        "OptionFactions2": -1,
+        "OptionFactions1": -1,
+        "DecreaseFaction1Points": 0b
+    },
+    "BossColor": 0,
+    "OverlayGlowing": 1b,
+    "CloakTexture": "",
+    "pSize": 5,
+    "HandDropChances": [
+        0.085f,
+        0.085f
+    ],
+    "BossBar": 0b,
+    "MovingState": 1,
+    "MovingPause": 1b,
+    "FireRate": 5,
+    "OnAttack": 0,
+    "pArea": 0,
+    "GroundSound": "minecraft:block.stone.break",
+    "pRender3D": 1b,
+    "ArmorItems": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+    ],
+    "Scripts": [
+    ],
+    "FiringSound": "minecraft:entity.arrow.shoot",
+    "ShowName": 0,
+    "LinkedNpcName": "",
+    "Armor": [
+    ],
+    "CanSprint": 0b,
+    "LootMode": 0,
+    "ReactsToFire": 0b,
+    "NpcInteractNPCLines": {
+        "Lines": [
+            {
+                "Song": "",
+                "Slot": 0,
+                "Line": "看紧林子，别让人绕到后面。"
+            },
+            {
+                "Song": "",
+                "Slot": 1,
+                "Line": "听见了吗？那边有脚步声。"
+            },
+            {
+                "Song": "",
+                "Slot": 2,
+                "Line": "守住路口。我去看看。"
+            },
+            {
+                "Song": "",
+                "Slot": 3,
+                "Line": "等换岗了，给我留一口炖汤。"
+            }
+        ]
+    },
+    "SkinUrl": "",
+    "PotionEffect": 0,
+    "IgnoreCobweb": 0b,
+    "ModRev": 18,
+    "KilledTime": 0L,
+    "TransformHasRole": 0b,
+    "DropChance": [
+        {
+            "Integer": 35.0f,
+            "Slot": 0
+        },
+        {
+            "Integer": 8.0f,
+            "Slot": 1
+        }
+    ],
+    "MoveSpeed": 5,
+    "NpcAttackLines": {
+        "Lines": [
+            {
+                "Song": "",
+                "Slot": 0,
+                "Line": "为了灰牙！"
+            },
+            {
+                "Song": "",
+                "Slot": 1,
+                "Line": "你的脚步太响了，入侵者！"
+            },
+            {
+                "Song": "",
+                "Slot": 2,
+                "Line": "别躲！接我这一斧！"
+            },
+            {
+                "Song": "",
+                "Slot": 3,
+                "Line": "这里就是你的终点！"
+            }
+        ]
+    },
+    "Fire": -1s,
+    "CombatRegen": 0,
+    "WalkingRange": 4,
+    "PositionOffsetZ": 5.0f,
+    "DeathTime": 0s,
+    "CanDrown": 1b,
+    "pStick": 0b,
+    "pDamage": 4,
+    "Orientation": 0,
+    "StandingState": 0,
+    "LeashingEntities": [
+    ],
+    "AggroRange": 16,
+    "OnGround": 0b,
+    "MaxFiringRange": 15,
+    "pEffect": 0,
+    "HitSound": "minecraft:entity.arrow.hit",
+    "pPhysics": 1b,
+    "CanLeap": 0b,
+    "TransformHasJob": 0b,
+    "FactionID": 2,
+    "NpcScenes": {
+        "Scenes": [
+        ]
+    },
+    "Name": "兽人战士",
+    "NpcAngrySound": "customnpcs:human.male.evil.attack",
+    "VisibleAvailability": {
+        "AvailabilityScoreboardObjective": "",
+        "AvailabilityDialog3Id": -1,
+        "AvailabilityFaction2Stance": 0,
+        "AvailabilityDialog4": 0,
+        "AvailabilityQuest2": 0,
+        "AvailabilityFaction": 0,
+        "AvailabilityDialog2Id": -1,
+        "AvailabilityQuest3Id": -1,
+        "AvailabilityQuest": 0,
+        "AvailabilityMinPlayerLevel": 0,
+        "AvailabilityQuest4Id": -1,
+        "AvailabilityQuest2Id": -1,
+        "AvailabilityDialog3": 0,
+        "AvailabilityDayTime": 0,
+        "AvailabilityScoreboard2Type": 1,
+        "AvailabilityScoreboard2Objective": "",
+        "AvailabilityDialog": 0,
+        "AvailabilityDialog4Id": -1,
+        "AvailabilityQuestId": -1,
+        "AvailabilityDialogId": -1,
+        "AvailabilityScoreboardType": 1,
+        "AvailabilityDialog2": 0,
+        "AvailabilityQuest3": 0,
+        "AvailabilityQuest4": 0,
+        "AvailabilityFactionId": -1,
+        "AvailabilityFactionStance": 0,
+        "AvailabilityFaction2": 0,
+        "AvailabilityScoreboardValue": 1,
+        "AvailabilityFaction2Id": -1,
+        "AvailabilityScoreboard2Value": 1,
+        "ModRev": 18
+    },
+    "npcInteracting": 1b,
+    "FindShelter": 2,
+    "NpcStepSound": "",
+    "ScriptEnabled": 0b,
+    "HurtByTimestamp": 0,
+    "AttackStrenght": 5,
+    "LeashedByEntities": [
+    ],
+    "HealthRegen": 0,
+    "pXlr8": 0b,
+    "MovementType": 0,
+    "FireIndirect": 0,
+    "CitadelData": {
+    },
+    "Size": 5,
+    "Role": 0,
+    "DoorInteract": 2,
+    "DirectLOS": 1b,
+    "TransformIsActive": 0b,
+    "SkinColor": 16777215,
+    "PositionOffsetX": 5.0f,
+    "NoFallDamage": 0b,
+    "BurstCount": 1,
+    "TransformHasAI": 0b,
+    "AttackRange": 2,
+    "pSpeed": 10,
+    "pTrail": 0,
+    "id": "customnpcs:customnpc",
+    "Title": "灰牙氏族",
+    "pGlows": 0b,
+    "HurtTime": 0s,
+    "AttackSpeed": 30,
+    "FallFlying": 0b,
+    "NpcLines": {
+        "Lines": [
+            {
+                "Song": "",
+                "Slot": 0,
+                "Line": "斧刃还利，哨火还亮。"
+            },
+            {
+                "Song": "",
+                "Slot": 1,
+                "Line": "风里有陌生人的气味……"
+            },
+            {
+                "Song": "",
+                "Slot": 2,
+                "Line": "营地在身后。我不会退。"
+            },
+            {
+                "Song": "",
+                "Slot": 3,
+                "Line": "巡完这条路，就该换岗了。"
+            }
+        ]
+    },
+    "GlowTexture": "",
+    "MountControl": 0b,
+    "MaxExp": 5,
+    "AimWhileShooting": 0b,
+    "pImpact": 0,
+    "DisablePitch": 0b,
+    "ImmuneToFire": 0b,
+    "ShowLayers": 1b,
+    "LeftHanded": 0b,
+    "minDelay": 20,
+    "MoveState": 0,
+    "NpcInteractLines": {
+        "Lines": [
+            {
+                "Song": "",
+                "Slot": 0,
+                "Line": "站住！前面是灰牙的营地。"
+            },
+            {
+                "Song": "",
+                "Slot": 1,
+                "Line": "收起你的花招。我的斧头可不认人。"
+            },
+            {
+                "Song": "",
+                "Slot": 2,
+                "Line": "想过这条路？先问问我的斧头！"
+            },
+            {
+                "Song": "",
+                "Slot": 3,
+                "Line": "我们不欢迎闯入者。离开这里！"
+            }
+        ]
+    },
+    "DefendFaction": 0b,
+    "Invulnerable": 0b,
+    "NpcJob": 0,
+    "ArmorDropChances": [
+        0.085f,
+        0.085f,
+        0.085f,
+        0.085f
+    ],
+    "NpcIdleSound": "",
+    "attributes": [
+        {
+            "base": 0.5d,
+            "id": "minecraft:generic.flying_speed"
+        },
+        {
+            "base": 5.0d,
+            "id": "minecraft:generic.attack_damage"
+        },
+        {
+            "base": 0.25d,
+            "id": "minecraft:generic.movement_speed"
+        },
+        {
+            "base": 32.0d,
+            "id": "minecraft:generic.follow_range"
+        },
+        {
+            "base": 24.0d,
+            "id": "minecraft:generic.max_health"
+        }
+    ],
+    "NpcInv": [
+        {
+            "count": 1,
+            "Slot": 0b,
+            "id": "minecraft:leather"
+        },
+        {
+            "count": 1,
+            "Slot": 1b,
+            "id": "minecraft:stone_axe"
+        }
+    ],
+    "AttackOtherFactions": 0b,
+    "pSpin": 0b,
+    "TransformEditingModus": 0b,
+    "pDur": 5,
+    "NpcVisible": 0,
+    "NpcsTimers": [
+    ],
+    "stopAndInteract": 1b,
+    "MovingPos": 0,
+    "KnockBack": 0,
+    "RespawnTime": 20,
+    "OrderedLines": 0b,
+    "ShotCount": 1,
+    "PotionAmp": 0,
+    "maxDelay": 40,
+    "ScriptLanguage": "ECMAScript",
+    "MarkovGeneratorId": 9,
+    "Motion": [
+        0.0d,
+        0.0d,
+        0.0d
+    ],
+    "CanPickUpLoot": 0b,
+    "PotionImmune": 0b,
+    "NpcDeathSound": "customnpcs:human.male.evil.death",
+    "PersistenceRequired": 1b,
+    "NpcModelData": {
+        "ExtraData": {
+        },
+        "HeadConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "LastEdited": 1790702184676L,
+        "Legs2Config": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "ArmsConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "MoveAnimation": 16,
+        "ModelType": 0,
+        "BodyConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "NewParts": [
+        ],
+        "Animation": 0,
+        "WingMode": 0,
+        "LegsConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "SimpleRender": 0b,
+        "Parts": [
+        ],
+        "DisplayName": "",
+        "CustomSkinUrl": "",
+        "Arms2Config": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        }
+    },
+    "NoLivingAnimation": 0b,
+    "BurnInSun": 0b,
+    "TransformHasStats": 0b,
+    "CreatureType": 0,
+    "PotionDuration": 5,
+    "pEffAmp": 0,
+    "TotalTicksAlive": 0L,
+    "Brain": {
+        "memories": {
+        }
+    },
+    "TransformHasInv": 0b,
+    "MinExp": 5,
+    "Rotation": [
+        2.7457f,
+        0.0f
+    ],
+    "Texture": "customnpcs:textures/entity/orcmale/leatherarmoredorc.png",
+    "NpcKilledLines": {
+        "Lines": [
+            {
+                "Song": "",
+                "Slot": 0,
+                "Line": "我的斧头……还没钝……"
+            },
+            {
+                "Song": "",
+                "Slot": 1,
+                "Line": "灰牙……守住营地……"
+            },
+            {
+                "Song": "",
+                "Slot": 2,
+                "Line": "这一战……你赢了……"
+            },
+            {
+                "Song": "",
+                "Slot": 3,
+                "Line": "山风……带我回家……"
+            }
+        ]
+    },
+    "NpcKillLines": {
+        "Lines": [
+            {
+                "Song": "",
+                "Slot": 0,
+                "Line": "我警告过你。"
+            },
+            {
+                "Song": "",
+                "Slot": 1,
+                "Line": "灰牙的路，灰牙来守。"
+            },
+            {
+                "Song": "",
+                "Slot": 2,
+                "Line": "把斧头擦净。还有下一班岗。"
+            },
+            {
+                "Song": "",
+                "Slot": 3,
+                "Line": "营地安全了。"
+            }
+        ]
+    },
+    "DistanceToMelee": 0,
+    "PositionOffsetY": 5.0f,
+    "HandItems": [
+        {
+        },
+        {
+        }
+    ],
+    "Air": 300s,
+    "AvoidsSun": 0b,
+    "AvoidsWater": 0b,
+    "MarkovGender": 0,
+    "NpcHurtSound": "customnpcs:human.male.evil.hurt",
+    "FallDistance": 0.0f,
+    "CanSwim": 1b,
+    "MaxHealth": 24,
+    "Health": 24.0f,
+    "UsingSkinUrl": 0b,
+    "PortalCooldown": 0
+}

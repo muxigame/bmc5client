@@ -9130,6 +9130,7 @@
     }
   ],
   "textFiles": [
+    "customnpcs/clones/1/兽人战士_灰牙氏族_v1.json",
     "config/abridged/structure_placement_config.json5",
     "config/abridged/structure_toggle_config.json5",
     "config/abridged.json",
