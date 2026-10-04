@@ -2,7 +2,7 @@
   "base": "d2ffbe577bece37b34280cffb802ecad7097226e",
   "version": "1.21.1.20251230-bmc-stock.4",
   "sha256": "fe9f1ff4bb4c072f5df88e381904a63f0637c874b29e9e8a4c35a958f104b1f5",
-  "pythonTestsPassed": 24,
+  "pythonTestsPassed": 30,
   "immutableRemoteBundleAndFilesPreserved": true,
   "remoteMcefRecordPreserved": true,
   "npcServerChecksPreviouslyPassed": 59,
@@ -32,5 +32,8 @@
     "Upstream-lock includes mutable mods/mcef-cache/LOG"
   ],
   "fullMergedRuntimeSmokeRun": false,
-  "thirdPartySourceOrBinaryPublished": false
+  "thirdPartySourceOrBinaryPublished": true,
+  "thirdPartySourcePublished": false,
+  "npcReleaseUrl": "https://github.com/muxigame/bmc5server/releases/tag/customnpcs-stock4-20261004",
+  "publicReleaseDownloadsVerified": true
 }

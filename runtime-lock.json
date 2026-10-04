@@ -9127,6 +9127,18 @@
       "url": "https://cdn.modrinth.com/data/EmdnQtis/versions/kVVMxHOA/simplenicknames-1.21.1-neoforge-0.8.0.jar",
       "size": 1412655,
       "sha256": "1aa51914c3808505b971e46ab0a5821191543c96d8279eb2965954a96754da26"
+    },
+    {
+      "url": "https://github.com/muxigame/bmc5server/releases/download/customnpcs-stock4-20261004/ACKNOWLEDGEMENTS.txt",
+      "size": 1023,
+      "sha256": "be8a8a6b874ffd23e9d987cbc7d3914e19657f274e4424be93f25f0a2ce98d3b",
+      "path": "licenses/CustomNPCs-Dragon-Power.txt"
+    },
+    {
+      "url": "https://github.com/muxigame/bmc5server/releases/download/customnpcs-stock4-20261004/BMC5-Dragon-Power-shader.zip",
+      "size": 2213883,
+      "sha256": "5f37b529f253c509bd380417d63d26b4f6d3c54b5bd1680116a95426fbdcecf2",
+      "path": "shaderpacks/BMC5-Dragon-Power-shader.zip"
     }
   ],
   "textFiles": [
@@ -16277,7 +16289,8 @@
           "size": 10572591,
           "sha256": "7ec87281f985a60d09fbe0724cce3da63c706a88ee3560a883c34c886be17b30"
         }
-      ]
+      ],
+      "url": "https://github.com/muxigame/bmc5server/releases/download/customnpcs-stock4-20261004/CustomNPCs-1.21.1.20251230-bmc-stock.4.jar"
     }
   ]
 }
