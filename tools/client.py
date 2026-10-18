@@ -198,7 +198,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action', choices=['setup', 'verify'])
     parser.add_argument('--mcef-jar', help='Checksum-matching source-rebuilt MCEF JAR (setup only)')
-    parser.add_argument('--npc-jar', help='Checksum-matching CustomNPCs stock.4 JAR (setup only)')
+    parser.add_argument('--npc-jar', help='Checksum-matching pinned CustomNPCs JAR (setup only)')
     parser.add_argument('--bundle', help='Optional checksum-matching local client-assets.zip')
     args = parser.parse_args()
     lock = json.loads((ROOT / 'runtime-lock.json').read_text(encoding='utf-8'))
