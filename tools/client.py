@@ -8,6 +8,7 @@ import shutil
 import sys
 import urllib.request
 import zipfile
+from npc_design_kit import install as install_npc_kit, verify as verify_npc_kit
 from local_rebuild import install as install_rebuilds, locked_records, overrides as rebuild_overrides, validated_sources, verify_rebuilds
 
 if sys.version_info < (3, 10):
@@ -132,7 +133,7 @@ def overlays(created):
 
 
 def verify(lock):
-    issues = verify_rebuilds(GAME, lock)
+    issues = verify_rebuilds(GAME, lock) + verify_npc_kit(ROOT, GAME, lock)
     for record in locked_records(lock):
         p = safe(GAME, record['path'])
         if not p.is_file() or p.stat().st_size != record['size'] or sha(p) != record['sha256']:
@@ -176,6 +177,7 @@ def setup(args, lock):
             raise RuntimeError('Refusing to overwrite modified binary: ' + record['path'])
         download(record, dest)
     install_rebuilds(ROOT, GAME, lock, getattr(args, 'mcef_jar', None), getattr(args, 'npc_jar', None))
+    install_npc_kit(ROOT, GAME, lock)
     created = set()
     for name in lock['textFiles']:
         dest = safe(GAME, name)
