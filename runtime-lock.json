@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "release": "city-core-20261108-on-launcher1.4.95",
+  "release": "city-core-20261108-on-launcher1.4.96",
   "minecraft": "1.21.1",
   "neoforge": "21.1.250",
   "coreVersion": "1.12.9-social-map.20261101.1",
@@ -47884,9 +47884,9 @@
   },
   "launcherBase": {
     "path": "launcher-base-lock.json",
-    "sha256": "69f8133d49e38fbe96d50a38585f5e62eca25d202ce62b8f3cb28d1afc93ac36",
-    "version": "1.4.95",
-    "manifestSHA256": "0c9292e296ea5591567e674fe6bef4df8ca565eca23d95aa799e614db927f372",
-    "sourceManifestSHA256": "0c9292e296ea5591567e674fe6bef4df8ca565eca23d95aa799e614db927f372"
+    "sha256": "c1d26a60091f40c6cbe9c2c9c79d99ef0326a0b59d577271a6bd7d90320e7b72",
+    "version": "1.4.96",
+    "manifestSHA256": "5b81ef0419d0a8bae6517076f238f1144fbaf21f554c9416ff0c2ec1191fffa7",
+    "sourceManifestSHA256": "5b81ef0419d0a8bae6517076f238f1144fbaf21f554c9416ff0c2ec1191fffa7"
   }
 }
