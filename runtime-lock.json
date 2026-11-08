@@ -47446,6 +47446,12 @@
       "size": 11290,
       "sha256": "9847e44eb685c274f8ded6cdf1b2602554a1744d66b018cc96a5b4ba04c140ae",
       "url": "https://github.com/muxigame/bmc5server/releases/download/city-core-20261108/lwjgl-compat.patch"
+    },
+    {
+      "path": "mods/city-core-l2-compat-0.0.2.jar",
+      "size": 3381,
+      "sha256": "8996fdaf339ff89dae8be66436b73d5a9d69b9be5994b1a58d2c8c3cc8084511",
+      "url": "https://github.com/muxigame/bmc5server/releases/download/city-core-20261108/city-core-l2-compat-0.0.2.jar"
     }
   ],
   "textFiles": [],
@@ -47848,6 +47854,18 @@
         "sourceProject": "camera-lock-movement",
         "bothSides": true,
         "url": "https://github.com/muxigame/bmc5server/releases/download/city-core-20261108/camera_lock-0.1.6.jar"
+      },
+      {
+        "modId": "city_core_l2_compat",
+        "path": "mods/city-core-l2-compat-0.0.2.jar",
+        "size": 3381,
+        "sha256": "8996fdaf339ff89dae8be66436b73d5a9d69b9be5994b1a58d2c8c3cc8084511",
+        "version": "0.0.2",
+        "license": "MIT",
+        "sourceProject": "city-core-l2-compat",
+        "bothSides": true,
+        "url": "https://github.com/muxigame/bmc5server/releases/download/city-core-20261108/city-core-l2-compat-0.0.2.jar",
+        "acceptanceScope": "Actual dedicated encode/source-map roundtrip + title-client exact1072B payload decode passed; real login and full city loop pending"
       }
     ],
     "creativeModeFirst": true,
