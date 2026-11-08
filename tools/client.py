@@ -9,6 +9,8 @@ import sys
 import urllib.request
 import zipfile
 from npc_design_kit import install as install_npc_kit, verify as verify_npc_kit
+from city_core import preflight as preflight_city, retire as retire_city, verify as verify_city
+from native_options import write_options
 from local_rebuild import install as install_rebuilds, locked_records, overrides as rebuild_overrides, validated_sources, verify_rebuilds
 
 if sys.version_info < (3, 10):
@@ -133,7 +135,17 @@ def overlays(created):
 
 
 def verify(lock):
-    issues = verify_rebuilds(GAME, lock) + verify_npc_kit(ROOT, GAME, lock)
+    if lock.get('launcherBase'):
+        from launcher_base import verify as verify_launcher
+        issues = verify_launcher(ROOT, GAME, lock) + verify_rebuilds(GAME, lock) + verify_npc_kit(ROOT, GAME, lock) + verify_city(ROOT, GAME, lock)
+        for record in lock['external'] + [dict(r,path=r.get('installedPath',r['path'])) for r in lock.get('localBuilds',[])]:
+            p = safe(GAME, record['path'])
+            if not p.is_file() or p.stat().st_size != record['size'] or sha(p) != record['sha256']:
+                issues.append(record['path'])
+        if issues: raise RuntimeError('Latest launcher baseline/overlay mismatch:\n'+'\n'.join(issues[:30]))
+        print('Verified launcher '+lock['launcherBase']['version']+' and city-core overlay.',flush=True)
+        return
+    issues = verify_rebuilds(GAME, lock) + verify_npc_kit(ROOT, GAME, lock) + verify_city(ROOT, GAME, lock)
     for record in locked_records(lock):
         p = safe(GAME, record['path'])
         if not p.is_file() or p.stat().st_size != record['size'] or sha(p) != record['sha256']:
@@ -147,6 +159,26 @@ def verify(lock):
 
 
 def setup(args, lock):
+    if lock.get('launcherBase'):
+        from launcher_base import setup as setup_launcher
+        preflight_city(ROOT, GAME, lock)
+        validated_sources(ROOT, lock, getattr(args,'mcef_jar',None), getattr(args,'npc_jar',None))
+        source_index = CACHE/'launcher-local-resources.json'
+        resources = json.loads(source_index.read_text('utf8')) if source_index.exists() else {}
+        created, stats = setup_launcher(ROOT, GAME, lock, local_resources=resources)
+        for record in lock['external']:
+            dest=safe(GAME,record['path'])
+            if dest.exists() and sha(dest)!=record['sha256']:raise RuntimeError('Modified overlay: '+record['path'])
+            download(record,dest)
+        install_rebuilds(ROOT,GAME,lock,getattr(args,'mcef_jar',None),getattr(args,'npc_jar',None))
+        retire_city(ROOT,GAME,lock)
+        install_npc_kit(ROOT,GAME,lock)
+        overlays(created)
+        verify(lock)
+        write_options(GAME,lock)
+        print('Ready latest public launcher baseline; no launcher/game started. '+str(stats),flush=True)
+        return
+    preflight_city(ROOT, GAME, lock)
     validated_sources(ROOT, lock, getattr(args, 'mcef_jar', None), getattr(args, 'npc_jar', None))
     bundle = Path(args.bundle).resolve() if args.bundle else CACHE / 'client-assets.zip'
     if args.bundle:
@@ -177,6 +209,7 @@ def setup(args, lock):
             raise RuntimeError('Refusing to overwrite modified binary: ' + record['path'])
         download(record, dest)
     install_rebuilds(ROOT, GAME, lock, getattr(args, 'mcef_jar', None), getattr(args, 'npc_jar', None))
+    retire_city(ROOT, GAME, lock)
     install_npc_kit(ROOT, GAME, lock)
     created = set()
     for name in lock['textFiles']:
@@ -190,6 +223,9 @@ def setup(args, lock):
         created.add('options.txt')
     overlays(created)
     verify(lock)
+    native_options = write_options(GAME, lock)
+    if native_options:
+        print('Windows city-core JVM options: @"' + str(native_options.resolve()) + '"', flush=True)
     print('Ready: ' + str(GAME), flush=True)
     print('Use a launcher with Minecraft 1.21.1 + NeoForge 21.1.250 + Java 21+, pointing at this game directory.')
 
@@ -202,7 +238,7 @@ def main():
     parser.add_argument('--bundle', help='Optional checksum-matching local client-assets.zip')
     args = parser.parse_args()
     lock = json.loads((ROOT / 'runtime-lock.json').read_text(encoding='utf-8'))
-    validate_text_manifest(lock)
+    if not lock.get('launcherBase'):validate_text_manifest(lock)
     setup(args, lock) if args.action == 'setup' else verify(lock)
 
 
