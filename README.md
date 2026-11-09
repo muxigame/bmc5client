@@ -1,5 +1,6 @@
-> 当前分支：**城市核心1.4.95候选，未发布、正常入服与玩法验收未通过**。
+> 当前分支：**城市核心1.4.96候选，未发布、正常入服与玩法验收未通过**。
 > 新版本模块、测试边界与阻断见[候选交接](docs/city-core-candidate.md)。下文1.9.1/motion118为历史基线说明，不代表当前锁定版本。
+> 本候选二进制尚未发布到 Releases，完整安装仍需已交付的增量候选包；直接 setup 可能缺少待发布资源。当前安装说明不表示完整城市玩法已验收。
 
 # muxigame BMC5 干净客户端
 
@@ -12,7 +13,7 @@ Minecraft **1.21.1** / NeoForge **21.1.250** / muxi-game-core **1.9.1**。
 安装 Git 和 Python 3.10+（Windows 可用 `py -3.12` 代替 python）：
 
 ```sh
-git clone -c core.longpaths=true https://github.com/muxigame/bmc5client.git
+git clone -c core.longpaths=true --branch release/city-core-20261108 https://github.com/muxigame/bmc5client.git
 cd bmc5client
 python tools/client.py setup
 python tools/client.py verify
