@@ -3,9 +3,9 @@
   "pack": {
     "id": "battermc5remake",
     "name": "BatterMC5Remake",
-    "version": "1.4.97",
-    "changelog": "PlayStation 0.2.0：断点续传、可选云存储、原生刻录卡槽、机型合成、分组键位、Wii/NDS/3DS与游戏机连线。",
-    "released": "2026-11-09T01:40:15.238828+00:00"
+    "version": "1.4.100",
+    "changelog": "PlayStation：修复JEI机型搜索与核心用途配方；主体拆至约1.25MB，固定模拟器运行库独立更新。",
+    "released": "2026-11-09T05:33:42.041565+00:00"
   },
   "minecraft": {
     "version": "1.21.1",
@@ -14,7 +14,7 @@
     "versionJson": "versions/BatterMC5Remake/BatterMC5Remake.json",
     "versionId": "BatterMC5Remake"
   },
-  "sourceManifestSHA256": "30f3104522c1383e441397384d28c237919aa1810099fd5ca2ca42e3c0ff562d",
+  "sourceManifestSHA256": "96c8ec8ad7376d3aa4d2e429c42c0182e2c1c98cb240dcd5c06cafa4d2a85629",
   "sourceManifestURL": "https://muxigame-prod-static-cn.oss-cn-hangzhou.aliyuncs.com/bmc/release/latest/manifest.json",
   "filesBaseURL": "https://muxigame-prod-static-cn.oss-cn-hangzhou.aliyuncs.com/bmc/release/latest/files/",
   "files": [
@@ -17138,14 +17138,6 @@
       "sourcePath": "mods/[新帕斯特之梦]pasterdream-0.9.6.jar"
     },
     {
-      "size": 1612095,
-      "sha1": "8faf96d7c3c12eaec819b4e273e58c048e8de125",
-      "sha256": "9f8b573059d63c8c64a827af13b6d6300e9f9c5dc11479a0a1f4db7092ac346a",
-      "policy": "Optional",
-      "path": "optional-mods/[更真实的第一人称模型]firstperson-neoforge-2.7.2-mc1.21.1.jar",
-      "sourcePath": "mods/[更真实的第一人称模型]firstperson-neoforge-2.7.2-mc1.21.1.jar"
-    },
-    {
       "size": 19123767,
       "sha1": "0e97e49837bed766e6f28a4c95b04885d6acc353",
       "sha256": "ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a",
@@ -17288,14 +17280,6 @@
       "policy": "Managed",
       "path": "mods/[脚步声]Presence Footsteps [NEOFORGE]+1.21-1.1.0.jar",
       "sourcePath": "mods/[脚步声]Presence Footsteps [NEOFORGE]+1.21-1.1.0.jar"
-    },
-    {
-      "size": 47890,
-      "sha1": "5b66b1c3ca8d32d06327d9564abf5a364296af3c",
-      "sha256": "6b73aaf8aa5427949b1c1a462ab9ec5f1711b0a03b92041c48a86b0dd87aed76",
-      "policy": "Optional",
-      "path": "optional-mods/[自动第三人称]auto_third_person-neo-1.21.1-2.2.jar",
-      "sourcePath": "mods/[自动第三人称]auto_third_person-neo-1.21.1-2.2.jar"
     },
     {
       "size": 77633,
@@ -17689,14 +17673,6 @@
       "policy": "Managed",
       "path": "mods/building_archive-0.6.0.jar",
       "sourcePath": "mods/building_archive-0.6.0.jar"
-    },
-    {
-      "size": 3708380,
-      "sha1": "f06c116c1b447a2cdb3162d6c9ec54c9a422b48d",
-      "sha256": "67fe384ae84f947e999a02ebde5f5e7de3a632803304a625beee9c4268509a76",
-      "policy": "Optional",
-      "path": "optional-mods/c2me-neoforge-mc1.21.1-0.4.0-alpha.0.120.jar",
-      "sourcePath": "mods/c2me-neoforge-mc1.21.1-0.4.0-alpha.0.120.jar"
     },
     {
       "size": 50235,
@@ -19429,11 +19405,19 @@
       "sourcePath": "mods/muxi-champion-companions-1.0.5.jar"
     },
     {
-      "path": "mods/muxi-console-0.2.0+mc1.21.1.jar",
-      "sourcePath": "mods/muxi-console-0.2.0+mc1.21.1.jar",
-      "size": 765477190,
-      "sha1": "91dbe776944992473024f22b033f7cca8fbb4e50",
-      "sha256": "3159e379e49db8446dea43896cbcb60d6a229f1b0c96d02a06a4488c70fe2149",
+      "path": "mods/muxi-console-0.2.2+mc1.21.1.jar",
+      "sourcePath": "mods/muxi-console-0.2.2+mc1.21.1.jar",
+      "size": 1254470,
+      "sha1": "4ae7ea53c6e0627105dec0540b0ce304439100d1",
+      "sha256": "e3a8f1308624b64f6e0dd62d92b511aa5c3bfa9213673de6de60bfe19090c569",
+      "policy": "Managed"
+    },
+    {
+      "path": "mods/muxi-console-runtime-1.0.0+mc1.21.1.jar",
+      "sourcePath": "mods/muxi-console-runtime-1.0.0+mc1.21.1.jar",
+      "size": 158785083,
+      "sha1": "e74c79ea2d57d66ab90a4ca6c6c8029cb45a92ff",
+      "sha256": "a237f798f8f03b158e9d1a61c9dd724217e5ec51b47c8ba3bcd139454b3d75e6",
       "policy": "Managed"
     },
     {
@@ -19479,12 +19463,12 @@
       "url": "https://muxigame-prod-static-cn.oss-cn-hangzhou.aliyuncs.com/bmc/release/releases/1.4.38/files/mods/muxi-localization-0.1.0-settings.3.jar"
     },
     {
-      "size": 2125627,
-      "sha1": "62973cc13ca69b5523c6e9a94400802dd1dc0514",
-      "sha256": "946ef2f3d8d4ea8a4d8ae383b480902c0ca9e8dcd497b94d965a96247604d69f",
-      "policy": "Managed",
-      "path": "mods/muxi-minigames-reward-presentation.20261029.1-return.2.jar",
-      "sourcePath": "mods/muxi-minigames-reward-presentation.20261029.1-return.2.jar"
+      "path": "mods/muxi-minigames-reward-presentation.20261029.1-return.3.jar",
+      "sourcePath": "mods/muxi-minigames-reward-presentation.20261029.1-return.3.jar",
+      "size": 2125608,
+      "sha1": "6322b3ee1a04d2be750d0fe6ef119fba3bafdf76",
+      "sha256": "f70997c4e4ec46773a0eb4e500958fe46b2105d9030d58c824a24e9ea5c91018",
+      "policy": "Managed"
     },
     {
       "size": 2497960,
@@ -20299,6 +20283,30 @@
       "policy": "Managed",
       "path": "mods/zombieimprovements-1.2.0+1.21.1-neoforge.jar",
       "sourcePath": "mods/zombieimprovements-1.2.0+1.21.1-neoforge.jar"
+    },
+    {
+      "size": 1612095,
+      "sha1": "8faf96d7c3c12eaec819b4e273e58c048e8de125",
+      "sha256": "9f8b573059d63c8c64a827af13b6d6300e9f9c5dc11479a0a1f4db7092ac346a",
+      "policy": "Optional",
+      "path": "optional-mods/[更真实的第一人称模型]firstperson-neoforge-2.7.2-mc1.21.1.jar",
+      "sourcePath": "mods/[更真实的第一人称模型]firstperson-neoforge-2.7.2-mc1.21.1.jar"
+    },
+    {
+      "size": 47890,
+      "sha1": "5b66b1c3ca8d32d06327d9564abf5a364296af3c",
+      "sha256": "6b73aaf8aa5427949b1c1a462ab9ec5f1711b0a03b92041c48a86b0dd87aed76",
+      "policy": "Optional",
+      "path": "optional-mods/[自动第三人称]auto_third_person-neo-1.21.1-2.2.jar",
+      "sourcePath": "mods/[自动第三人称]auto_third_person-neo-1.21.1-2.2.jar"
+    },
+    {
+      "size": 3708380,
+      "sha1": "f06c116c1b447a2cdb3162d6c9ec54c9a422b48d",
+      "sha256": "67fe384ae84f947e999a02ebde5f5e7de3a632803304a625beee9c4268509a76",
+      "policy": "Optional",
+      "path": "optional-mods/c2me-neoforge-mc1.21.1-0.4.0-alpha.0.120.jar",
+      "sourcePath": "mods/c2me-neoforge-mc1.21.1-0.4.0-alpha.0.120.jar"
     },
     {
       "size": 29772,
@@ -120756,9 +120764,19 @@
       "path": "mods/muxi-console-0.1.0+mc1.21.1.jar",
       "size": 531648674,
       "sha256": "370f59645046e97386f5b89b3ba44d13085e37f29dccd44f4b7dec130ccc2f44"
+    },
+    {
+      "path": "mods/muxi-minigames-reward-presentation.20261029.1-return.2.jar",
+      "size": 2125627,
+      "sha256": "946ef2f3d8d4ea8a4d8ae383b480902c0ca9e8dcd497b94d965a96247604d69f"
+    },
+    {
+      "path": "mods/muxi-console-0.2.0+mc1.21.1.jar",
+      "size": 765477190,
+      "sha256": "3159e379e49db8446dea43896cbcb60d6a229f1b0c96d02a06a4488c70fe2149"
     }
   ],
-  "scope": "Official1.4.97 common baseline + nine unchanged city modules; one complete Console0.2 replacement; no worlds/accounts copied",
+  "scope": "Official1.4.100 baseline + City0.11.0 and other8 locked modules; two retired and three new public modules; no worlds/accounts",
   "compatibilityAcceptance": "NPC134/YSM3 integration still pending; this is not a release approval",
   "profileCorrections": [
     {
@@ -120768,9 +120786,7 @@
     }
   ],
   "previousBaselineMilestone": {
-    "version": "1.4.96",
-    "sha256": "c1d26a60091f40c6cbe9c2c9c79d99ef0326a0b59d577271a6bd7d90320e7b72",
-    "manifestSHA256": "5b81ef0419d0a8bae6517076f238f1144fbaf21f554c9416ff0c2ec1191fffa7",
-    "gitCommit": "d1f0cd78e7455c4ff6c3a88ac3b2736a18ea46c1"
+    "version": "1.4.97",
+    "sha256": "45c66b01caf787d382a666d5a05ff86b83be91e559fa84c1ad7e25c846f39047"
   }
 }
